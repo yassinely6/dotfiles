@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ORIGINAL_DIR=$(pwd)
-REPO_URL="my github link"
+REPO_URL="https://github.com/yassinely6/dotfiles.git"
 REPO_NAME="dotfiles"
 
 is_stow_installed() {
@@ -29,8 +29,8 @@ echo "applying dotfiles..."
 cd "$REPO_NAME" || exit 1
 
 # 🔥 REMOVE CONFLICTING FILE BEFORE STOW
-rm -f ~/.config/hypr/hyprlock.conf
-
+rm -f ~/.config/hypr/hyprlock.conf  ~/.config/hypr/input.conf ~/.local/share/omarchy/bin/omarchy-system-lock
+stow lock-time
 stow hypr
 
 cd "$ORIGINAL_DIR"
