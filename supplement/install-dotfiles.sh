@@ -30,6 +30,7 @@ cd "$REPO_NAME" || exit 1
 
 # 🔥 REMOVE CONFLICTING FILE BEFORE STOW
 rm -f ~/.config/hypr/hyprlock.conf  ~/.config/hypr/input.conf ~/.local/share/omarchy/bin/omarchy-system-lock
+stow nvim
 stow lock-time
 stow hypr
 
